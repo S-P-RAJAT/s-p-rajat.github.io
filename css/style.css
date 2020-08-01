@@ -25,7 +25,6 @@ body {
   background-size: cover;
   background-position: center;
   padding: 20vh 0%;
-  /*clip-path: polygon(0 0,100% 0,100% 80%,0 100%);*/
   text-align: center; }
   .header .sub-header {
     font-size: 2.5rem; }
@@ -118,7 +117,11 @@ section {
         box-shadow: 1.5rem 1.5rem 1.5rem grey; }
 
 .footer {
-  background-color: #212121;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(33, 33, 33, 0.85), rgba(33, 33, 33, 0.85)), url("../img/logos/footer.jpeg");
   padding: 1rem;
   font-size: 3rem;
   color: white;
@@ -130,19 +133,19 @@ section {
     border-radius: 0.3rem; }
     .footer a:hover {
       color: black; }
-  .footer .links div {
+  .footer .links .links-primary {
     margin: 6rem 1rem;
     display: inline-block;
     background-color: #eee;
     border-radius: 1rem; }
-    .footer .links div a {
+    .footer .links .links-primary a {
       opacity: 100%; }
-    .footer .links div .linkedin-link {
+    .footer .links .links-primary .linkedin-link {
       padding-right: 0.3rem;
       padding-left: 0.2rem; }
-    .footer .links div:hover {
+    .footer .links .links-primary:hover {
       transform: translateY(-0.2rem); }
-    .footer .links div:active {
+    .footer .links .links-primary:active {
       transform: translateY(-0.1rem); }
   .footer .links .credits a {
     background-color: #bababa; }
@@ -169,6 +172,17 @@ section {
 
 #email {
   display: none; }
+
+#codelogo {
+  display: inline-block;
+  height: 4rem;
+  margin-bottom: -0.7rem; }
+
+#codedeveloper {
+  font-size: 4rem;
+  margin: 4rem; }
+  #codedeveloper a {
+    opacity: 100%; }
 
 @media screen and (min-width: 30rem) {
   .container {
