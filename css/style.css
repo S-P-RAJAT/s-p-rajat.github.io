@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: inherit; }
 
+a {
+  -webkit-tap-highlight-color: transparent; }
+
 html {
   font-size: 42%; }
 
@@ -33,12 +36,43 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; }
+  .header .header-button {
+    margin-top: 8rem;
+    display: inline-block;
+    animation: moveInBottom .5s ease-out 2.6s;
+    animation-fill-mode: backwards; }
+    .header .header-button:link {
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      font-weight: bold;
+      padding: 2rem 4rem;
+      border-radius: 15rem;
+      background-color: #110720;
+      border: 0.15rem solid white; }
+    .header .header-button:hover {
+      opacity: 95%;
+      transform: translateY(-0.4rem);
+      box-shadow: 0rem 1rem 3rem #555; }
+    .header .header-button:active {
+      background-color: #e6e6e6;
+      color: #110720;
+      transform: translateY(-0.2rem);
+      box-shadow: 0rem 0.5rem 3rem #555; }
 
 @keyframes fadeInAnimation {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .profile {
   margin: 0rem 5%; }
@@ -172,6 +206,9 @@ section {
 
 #email {
   display: none; }
+
+#emailname {
+  display: inline-block; }
 
 #codelogo {
   display: inline-block;

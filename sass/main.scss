@@ -7,7 +7,9 @@ $color-primary : rgb(123, 23, 211);
  	padding: 	0;
  	box-sizing: inherit;
 }
-
+a{
+	-webkit-tap-highlight-color: transparent;
+}
 html{
 	font-size: 	42%;
 }
@@ -21,6 +23,7 @@ body {
 
 	/*padding: 2.5%;*/
 }
+
 .header {
 	color: 				#fff;
 	min-height: 		95vh;
@@ -42,6 +45,35 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards; 
 	}
+	.header-button{
+		margin-top:				8rem;
+		display:inline-block;
+		&:link{
+			text-decoration: 	none;
+			font-size:			2rem;
+			color:				white;
+			font-weight: 		bold;
+			padding: 			2rem 4rem;
+			border-radius:		15rem;
+			background-color:	#110720;
+			border: 			0.15rem solid white;
+		}
+		&:hover{
+			opacity:			95%;
+	        transform: 			translateY(-0.4rem);
+	        box-shadow: 		0rem 1rem 3rem #555;
+
+		}
+		&:active{
+			background-color: 	darken(white,10%);
+			color:				#110720;
+	        transform: 			translateY(-0.2rem);
+   	        box-shadow: 		0rem 0.5rem 3rem #555;
+
+		}
+		animation: 				moveInBottom .5s ease-out 2.6s;
+        animation-fill-mode: 	backwards;
+	}
 }
 @keyframes fadeInAnimation { 
             0% { 
@@ -51,7 +83,17 @@ body {
                 opacity: 1; 
             }
 }
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 .profile{
 	margin: 0rem 5%;
 }
@@ -246,6 +288,9 @@ $color-footer : #212121;
 }
 #email{
 	display:		none;
+}
+#emailname{
+	display:inline-block;
 }
 #codelogo{
 	display:		inline-block;
