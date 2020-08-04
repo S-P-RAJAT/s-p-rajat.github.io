@@ -39,6 +39,7 @@ body {
   .header .header-button {
     margin-top: 8rem;
     display: inline-block;
+    transition: ease 0.2s;
     animation: moveInBottom .5s ease-out 2.6s;
     animation-fill-mode: backwards; }
     .header .header-button:link {
