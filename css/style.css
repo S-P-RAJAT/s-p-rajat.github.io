@@ -42,7 +42,7 @@ body {
     transition: ease 0.2s;
     animation: moveInBottom .5s ease-out 2.6s;
     animation-fill-mode: backwards; }
-    .header .header-button:link {
+    .header .header-button:link,.header .header-button:visited {
       text-decoration: none;
       font-size: 2rem;
       color: white;
